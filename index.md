@@ -1,7 +1,14 @@
-Olá, meu nome é Rodrigo Castro Eleotério. Seja bem vindo a minha página pessoal.
+Olá, meu nome é Rodrigo Castro Eleotério. Seja bem-vindo a minha página pessoal.
 
-Aqui você vai encontrar meu currículo, minhas documentações de projetos de código fonte abertos ou ainda não e minhas divulgações. Para acessar meus projetos vá para [github.com/rodrigoce](https://github.com/rodrigoce)
+Esta página está em construção.
 
-# Documentações
+Não leia o que você não deseja, vá pelo índice.
 
-1. [TabManager](./TabManager/index.md)
+# Índice
+
+1. [Meu currículo] ()
+2. [Projetos no GitHub] (https://github.com/rodrigoce)
+3. [TabManager](./TabManager/index.md)
+4. [WebApp]()
+5. [Sistema de Academia]()
+6. [DigsER (Modelagem de BD)]()
