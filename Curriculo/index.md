@@ -1,7 +1,7 @@
 ## Currículo
 
-Currículo são nossas nossas experiências (bem sucedidas). Particularmente não faço cursos 
-que me entregam um diplona ou certificado, mas certifico meu conhecimento e capacidade entregando os trabalhos por onde trabalhei. 
+Currículo são nossas nossas experiências. Normalmente não faço cursos 
+por diplona ou certificado, mas certifico meu conhecimento e capacidade entregando os projetos por onde trabalhei. 
 A internet é muito rica de conteudos para T.I., normalmente eu leio, assisto, aprendo e uso. 
 
 Acesse [aqui](/Curriculo/cv2020.pdf) meu currículo em formato tadicional.
@@ -10,7 +10,7 @@ Acesse [aqui](/Curriculo/cv2020.pdf) meu currículo em formato tadicional.
 
 1. Analista de Sistemas FAEPA - 2011
 
-    O conteúdo deste processo seletivou focou em Delphi, PL/SQL e UML. Houve prova prática.
+    O conteúdo deste processo seletivo focou em Delphi, PL/SQL e UML. Houve prova prática.
   
     ![Recorte](/Curriculo/faepa2011.PNG)
   
@@ -18,7 +18,7 @@ Acesse [aqui](/Curriculo/cv2020.pdf) meu currículo em formato tadicional.
 
 2. Docente da ETEC/Ibitinga/SP - 2009
 
-    O conteúdo deste processo seletivo focou em PHP. Houve prova prática, sendo esta na verdade uma aula aos docentes da ETEC.
+    O conteúdo deste processo seletivo focou em PHP. Houve prova prática, uma aula aos docentes da ETEC.
    
     ![Recorte](/Curriculo/etec2009.PNG)
    
