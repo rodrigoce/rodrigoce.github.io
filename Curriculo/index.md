@@ -26,4 +26,4 @@ Acesse [aqui](/Curriculo/cv2020.pdf) meu currículo em formato tadicional.
 
 3. Analista de Sistemas Tabatinga/SP 2009
 
-    Infelismente não entrei mais na internet o resultado da prova. Seu conteúdo focou em Delphi e UML.
+    Infelizmente não achei mais na internet o resultado da prova. Seu conteúdo focou em Delphi e UML.
