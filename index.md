@@ -1,6 +1,6 @@
 Esta página está em construção.
 
-Não leia o que você não deseja, vá pelo índice.
+Leia o que você deseja, vá pelo índice.
 
 # Índice
 
