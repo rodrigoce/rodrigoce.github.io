@@ -1,5 +1,3 @@
-Olá, meu nome é Rodrigo Castro Eleotério. Seja bem-vindo a minha página pessoal.
-
 Esta página está em construção.
 
 Não leia o que você não deseja, vá pelo índice.
