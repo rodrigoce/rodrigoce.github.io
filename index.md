@@ -1,7 +1,5 @@
 Esta página está em construção.
 
-Leia o que você deseja, vá pelo índice.
-
 # Índice
 
 1. [Meu currículo](./Curriculo/indexCurriculo.md)

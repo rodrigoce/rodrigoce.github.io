@@ -1,4 +1,4 @@
-[Início](../index.md)
+[Página Pai](../index.md)
 
 Currículo são nossas nossas experiências. Normalmente não faço cursos 
 por diplona ou certificado, mas certifico meu conhecimento e capacidade entregando os projetos por onde trabalhei. 

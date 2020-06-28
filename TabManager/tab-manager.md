@@ -1,4 +1,4 @@
-[Index](index)
+[Página Pai](./indexTabManager.md)
 
 # fazer o botão voltar funcionar
 
