@@ -1,4 +1,4 @@
-## Currículo
+[Início](../index.md)
 
 Currículo são nossas nossas experiências. Normalmente não faço cursos 
 por diplona ou certificado, mas certifico meu conhecimento e capacidade entregando os projetos por onde trabalhei. 
@@ -6,7 +6,10 @@ A internet é muito rica de conteudos para T.I., normalmente eu leio, assisto, a
 
 Acesse [aqui](/Curriculo/cv2020.pdf) meu currículo em formato tadicional.
 
-## Concursos aprovados em primeiro lugar
+## Concursos
+
+Nesta seção coloquei as provas que passei em primeiro lugar. No período de 2009 até 2011 eu estava a procura de melhores 
+salários e tive atividade em concursos.
 
 1. Analista de Sistemas FAEPA - 2011
 

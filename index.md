@@ -4,7 +4,7 @@ Leia o que você deseja, vá pelo índice.
 
 # Índice
 
-1. [Meu currículo](./Curriculo/index.md)
+1. [Meu currículo](./Curriculo/indexCurriculo.md)
 2. [Projetos no GitHub](https://github.com/rodrigoce)
 3. [TabManager](./TabManager/index.md)
 4. [WebApp]()
