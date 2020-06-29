@@ -1,12 +1,12 @@
 [Página Pai](./indexWebApp.md)
 
-# Autenticação e Autorização
+## Autenticação e Autorização
 
-## Autenticação
+### Autenticação
 
 Para autenticação (usuário e senha) foi usado AuthenticationCookies, sem o pacote do EF pronto, assim pode-se fazer essa área do sistema toda sob medida.
 
-## Autorização
+### Autorização
 
 Para autorização foi criado o conceito de Módulos. Este é uma parte do sistema cadastrada de forma personalizada adicionando Menus. Estes são cadastrados e apontados a um Controller e a uma Action. Depois disso, para o Módulo é marcado quais Controllers e Actions ele concede acesso.
 

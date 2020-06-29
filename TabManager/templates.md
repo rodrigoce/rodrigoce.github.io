@@ -1,16 +1,16 @@
 [Página Pai](./indexTabManager.md)
   
-# Templates
+## Templates
 
 São funções implementadas em typescript ou javascript que são associadas ao elemento HTML. Elas podem alterar o DOM da forma que for preciso, como aplicar estilos, adicionar eventos, implementar funcionalidades, etc. 
 
-## *AjaxLinkTemplate*
+### *AjaxLinkTemplate*
 
 Para serem ligados ao elemento **a**.
 
 > Esse template reage a parâmetros no Header.
 
-### Parâmetros no Header podem ser:
+#### Parâmetros no Header podem ser:
 
 Param    | Valores
 -------- | ----------------------------------------------------------------------------------------------
@@ -18,7 +18,7 @@ view     | none - não altera a view atual em nada. retornar new EmptyResult();
 postback | [ success / info / warning / error ]. Exibe um toaster para o usuário. Requer o parâmetro "msg" também informado.
 msg	     | Texto com a mensagem para o usuário 
 
-### Atributos
+#### Atributos
 
 1. **data-title='Título da tab'** [tabs] - Título da nova aba. 
 2. **data-target='#elemento'** [ambos] - Insere o response do ajax dentro do container substituindo o conteúdo atual. Quando especificado não abre nenhuma aba.
@@ -29,13 +29,13 @@ página.
 6. **data-content-in-container** - não realiza um request ajax, os dados a serem colocados em uma aba estão dentro de um div container. Passar o ID do div #idDivContainer como parâmetro.
 7. **data-refresh-tab='true'** - atualiza o conteúdo da tab atual. Passar "#" em href para usar a url do último GET.
 
-## *AjaxFormTemplate*
+### *AjaxFormTemplate*
 
 Para serem ligados ao elemento **form**.
 
 > Esse template reage a parâmetros no Header.
 
-### Parâmetros no Header podem ser:
+#### Parâmetros no Header podem ser:
 
 Param         | Valores
 ------------- | --------------------------------------------------------------------------------
@@ -44,18 +44,18 @@ titulo        | Quando "view" for passada o valor "novatab" será título da nov
 postback      | [ success / info / warning / error ] **NOTA**. Requer o parâmetro msg também informado.
 msg           | Texto com a mensagem para o usuário 
 
-### Atributos ###
+#### Atributos 
 
 1. **data-no-close-last-tab='true'** [tabs] - Não fecha a tab atual apos enviar o form.
 2. **data-razor-grid='#id'** [ambos] - Especifica o id da razor-grid que receberá o response do envio do form. normalmente usado na combinação form de pesquisa de grid.
 3. **data-previous-tab-refresh='true'** [tabs] - Informa que a tab anterior deve ser atualizada após o envio de form. Chama novamente a url do carregamento da tab.
 4. **data-click-grid-active-pager='#id'** [ambos] - clica no pager da razor grid após o envio do form para efeitos de atualização da grid.
 
-## *CascadeDropDownTemplate*
+### *CascadeDropDownTemplate*
 
 Para serem ligados ao elemento **select**.
 
-### Atributos ###
+#### Atributos 
 
 1. **data-controller='...Controller'** [ambos] - Nome do Controller que receberá o request.
 2. **data-action='Json...'** [ambos] - Nome da Action que receberáo request.
@@ -72,11 +72,11 @@ Ex:
 </select>
 ```
 
-## *ElWithGuidTemplate*
+### *ElWithGuidTemplate*
 
 Para serem ligados a qualquer elemento.
 
-### Atributos ###
+#### Atributos 
 
 1. **data-template-params='a,b,c'** [ambos] - onde "a" é o nome do atributo onde a Guid vai ser inserido, "b" é opcional, representa um alias para o Guid, o alias é usado para poder recuperar o valor do Guid em referências futuras e "c" é o prefixo opcional que pode ser concatenado com o Guid.
 
