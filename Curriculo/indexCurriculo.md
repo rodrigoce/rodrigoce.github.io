@@ -1,4 +1,6 @@
-[Página Pai](../index.md)
+[Página Pai](/index.md)
+
+## Currículo
 
 Currículo são nossas nossas experiências. Normalmente não faço cursos 
 por diplona ou certificado, mas certifico meu conhecimento e capacidade entregando os projetos por onde trabalhei. 
@@ -8,8 +10,8 @@ Acesse [aqui](/Curriculo/cv2020.pdf) meu currículo em formato tadicional.
 
 ## Concursos
 
-Nesta seção coloquei as provas que passei em primeiro lugar. No período de 2009 até 2011 eu estava a procura de melhores 
-salários e tive atividade em concursos.
+No período de 2009 até 2011 eu estava a procura de melhores salários e tive atividade em concursos.
+Nesta seção coloquei as provas que passei em primeiro lugar. 
 
 1. Analista de Sistemas FAEPA - 2011
 
