@@ -1,4 +1,4 @@
-[Página Pai](/index.md)
+[Página Pai](../index.md)
 
 ## TabManager
 
