@@ -1,8 +1,8 @@
 [Página Pai](./indexWebApp.md)
 
-# Divisão em projetos e camadas
+## Divisão em camadas
 
-## Quanto ao projeto e suas categorias de classes e arquivos internos
+### Quanto ao projeto e suas categorias de classes e arquivos internos
 
 O WebApp é dividido em 3 projetos:
 
@@ -12,7 +12,7 @@ O WebApp é dividido em 3 projetos:
 
 Algumas categorias de classes foram colocadas diretamente em ApplicationCore para evitar a necessidade de uso de interfaces e ganhar tempo.
 
-## Quanto às camadas lógicas
+### Quanto às camadas lógicas
 
 O fluxo mais corriqueiro em aplicativos MVC é vir do client um request que bate direto num controller, este irá acessar a service que por sua vez acessa o repository. O fluxo depois disso vem ao contrário passando por cada camada até voltar ao client novamente. Neste ponto deve ser respeitado dentro do WebApp que uma camada não deve pular uma camada para chegar a outra camada, salvos casos necessários ou que isso não faça sentido.
 
