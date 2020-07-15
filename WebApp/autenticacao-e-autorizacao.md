@@ -4,7 +4,7 @@
 
 ### Autenticação
 
-Para autenticação (usuário e senha) foi usado AuthenticationCookies, sem o pacote do EF pronto, assim pode-se fazer essa área do sistema toda sob medida.
+Para autenticação (usuário e senha) foi usado AuthenticationCookies, não foi usado o pacote Identity, assim pode-se fazer essa área do sistema toda sob medida.
 
 ### Autorização
 

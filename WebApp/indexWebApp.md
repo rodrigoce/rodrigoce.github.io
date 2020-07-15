@@ -2,7 +2,7 @@
 
 ## WebApp
 
-É um Aplicativo Web monolítico construído com Asp.Net Core, EF Core, Razor, TypeScript, JavaScript, JQuery, etc.
+É um Aplicativo Web monolítico construído com Asp.Net Core, EF Core, Razor, TypeScript, JavaScript, JQuery e outros.
 
 ### Server Side
 
@@ -10,6 +10,8 @@
 
 1. [Divisão em projetos e camadas](divisao-em-projetos-e-camadas)
 2. [Autenticação e autorização](autenticacao-e-autorizacao)
+3. [Tratamento de erros](tratamento-de-erros)
+4. [Validação Server e Client Side](validacao)
 
 ### Client Side
 
