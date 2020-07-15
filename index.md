@@ -7,4 +7,4 @@ Esta página está em construção.
 4. [WebApp](./WebApp/indexWebApp.md)
 5. [Sistema de Academia](./SistemaAcademia/indexSistemaAcademia.md)
 6. [DigsER](https://sites.google.com/site/modelodigser)
-7. [WebApp + Tá manager Demo](http://rodrigocewebapp.azurewebsites.net/)
+7. [WebApp + TabManager Demo](http://rodrigocewebapp.azurewebsites.net/)
