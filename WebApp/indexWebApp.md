@@ -17,4 +17,4 @@
 
 Como foi escolhido escrever a UI em Razor, descartando Angular, Vue, React, etc., a curva de amprendizado para
 Client Side ficou menor, mas abriu uma lacuna: uma library client side reutilizável, que melhore a proditividade de código,
-e que melhore a UX. Para isso foi criada a library [TabManager](../../TabManager/indexTabManager.md).
+e que melhore a UX. Para isso foi criada a library [TabManager](../../TabManager/indexTabManager).
