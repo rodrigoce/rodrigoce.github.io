@@ -41,7 +41,7 @@ SaveChanges() chame por HttpContext.GetExceptionsHelper().[alguma coisa].
 Ao final da Actions que o Request solitou, é o ponto para devolver a UI do usuário e é ai que mais 
 uma vez vai-se usar HttpContext.GetExceptionsHelper().[alguma coisa].
 
-Veja no exemplo:
+Veja no exemplo 1:
 
 ``` C#
 
@@ -60,5 +60,9 @@ Veja no exemplo:
 ```
 
 ResponseHelper: é um classe que favorece para que DRY aconteça.
+
+Exemplo 2.
+
+Está previsto para o Service não ter exceptions não tratadas e apenas retornar boolean informando se a operação foi realizada ou não. Contudo, as exceptions do Service podem ser colocadas em HttpContext.GetExceptionsHelper().AddException, ficando assim código do Controller invocando uma Service que retorna true ou false.
 
 

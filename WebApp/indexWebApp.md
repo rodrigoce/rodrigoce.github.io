@@ -12,6 +12,7 @@
 2. [Autenticação e autorização](autenticacao-e-autorizacao)
 3. [Tratamento de erros](tratamento-de-erros)
 4. [Validação Server e Client Side](validacao)
+5. [Tratamento de erros Versus Validação](try-versus-validations)
 
 ### Client Side
 
