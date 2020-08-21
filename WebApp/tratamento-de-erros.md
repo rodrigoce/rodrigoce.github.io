@@ -6,23 +6,15 @@ Tramento de erros é um requisito natural, além disso na ocorrencia de um erro,
 
 ### Olhando para o manual do Asp.net Core.
 
-Neste link informações sobre o Middleware para tratamento de exceções disponibilizado pela Microsoft e configurado no WebApp. Mas resumidamente, o Middleware tem uma página para mostrar detalhes de uma exception para o desenvolvedor e outra, foi desenvolvida, para ambiente de produção com dados básicos e não sensíveis a segurança do aplicativo para o usuário.
+Neste [link](https://docs.microsoft.com/pt-br/aspnet/core/fundamentals/error-handling?view=aspnetcore-3.1) informações sobre o Middleware para tratamento de exceções disponibilizado pela Microsoft e configurado no WebApp. Mas resumidamente, o Middleware tem uma página para mostrar detalhes de uma exception para o desenvolvedor e outra, foi desenvolvida, para ambiente de produção com dados básicos e não sensíveis a segurança do aplicativo para o usuário.
 
-https://docs.microsoft.com/pt-br/aspnet/core/fundamentals/error-handling?view=aspnetcore-3.1
+Neste outro [link](https://docs.microsoft.com/pt-br/dotnet/standard/exceptions/best-practices-for-exceptions) as melhores práticas para exceções.
 
-Neste outro link as melhores práticas para exceções.
-
-https://docs.microsoft.com/pt-br/dotnet/standard/exceptions/best-practices-for-exceptions
-
-Dois pontos em destaque nas boas práticas: 1. "Use blocos try/catch ao redor de código que pode potencialmente gerar uma exceção **e** seu código pode se recuperar dessa exceção". 2. Não fazer uso de funções que retornam código de erros ou booleano na intenção de denotar sucesso ou falha.
-
-Ou seja, 
-
-Validações simples em ViewModel vão ocorrer e validações mais complexas vão occorer em Service e serão apresentadas para usuário como uma mensagem de Validação.
+Dois pontos em destaque nas boas práticas: 1. "Use blocos try/catch ao redor de código que pode potencialmente gerar uma exceção **e** seu código pode se recuperar dessa exceção". 2. Não fazer uso de funções que retornam código de erros ou boolean na intenção de denotar sucesso ou falha.
 
 ### Exemplos de exceções que não serão tratadas
 
-Como exceptions são exceções, e o conceito implicito dessa palavrava não foi escolhido ao acaso na criação de linguagens de programação, quase nunca trata-se exceptions, até porque definiu-se aqui que exceptions vão ocorrer e serão tratadas pelo Middleware e serão mostradas ao usuário como mensagens de erro.
+Definiu-se aqui que exceptions vão ocorrer e serão tratadas pelo Middleware e serão mostradas ao usuário como mensagens de erro. Isso valerá pelo menos para a maioria dos casos.
 
 Exemplos:
 
@@ -31,9 +23,9 @@ Exemplos:
 
 ### Exemplos de exceções que serão tratadas
 
-Quando uma exception pode ser recuperada para que o erro deixe de existir.
+Quando uma exception **pode ser recuperada** para que o erro deixe de existir.
 
-1. Quando uma exception não tratada ocorrer deve-se gravar em log de banco de dados os detalhes da exception. Mas se o erro anterior tiver ocorrido por causa de indisponibilidade de banco de dados não será possível gravar em banco de dados e neste caso o try/catch pode ser usado, ou seja ao tentar gravar o log em banco, vai ocorrer uma exception, a recuperação do erro em catch seria gravar o log em arquivo para depois importar para o banco de dados .
+1. Quando uma exception não tratada ocorrer deve-se gravar em log de banco de dados os detalhes da exception. Mas se o erro anterior tiver ocorrido por causa de indisponibilidade de banco de dados não será possível gravar em banco de dados e neste caso o try/catch pode ser usado, ou seja ao tentar gravar o log em banco, vai ocorrer uma exception, a recuperação do erro em catch seria gravar o log em arquivo para depois importar para o banco de dados.
 2. 
 
 ### Exemplos de exceções que podem ser tratadas e transformadas em erro de validação

@@ -1,8 +1,8 @@
 [Página Pai](./indexWebApp.md)
 
-##
+## Validando Regras de Negócio
 
-Validação é verificar se alguma regra de negócio foi violada. Essa regra pode ser simples, como digitar pelo menos 3 caracteres em algum campo ou uma regra de negócio mais elaborada como: se um cliente for pessoa física, não poder finalizar uma compra com o opção de parcelamento se ele possuir débitos pendentes.
+Validação é verificar se alguma regra de negócio foi violada. Essa regra pode ser simples, como digitar pelo menos 3 caracteres em algum campo ou uma regra de negócio mais elaborada como se um cliente for pessoa física, não poder finalizar uma compra com o opção de parcelamento se ele possuir débitos pendentes.
 
 ### Validações Aplicaveis na classe ViewModel
 
