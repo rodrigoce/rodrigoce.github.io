@@ -42,3 +42,26 @@ Ex.
 
 A classe servive pode apoiar-se na classe repository para fazer uma validação mas é service quem faz. Para que a classe service possa inserir erros de validação dentro ModelState o metodo de service deve receber o parâmetro ModelState do Controller.
 
+### Exemplo de Validação em View e Service
+
+No exemplo abaixo o Controller verifica se ModelState é válido primeiramente testando ViewModel e depois testando em Service. Note que o método service recebe como parâmetro o ModelState para que ele possa inserir suas mensagens de validação. Perceba também que o método de Service retorna void, pois ele esta escrevendo suas considerações em ModelState.
+
+``` C#
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public IActionResult EditBairroPost(EditBairroVM vm)
+    {
+        if (ModelState.IsValid)
+        {
+            bairroSer.AddOrUpdate(vm, ModelState);
+            if (ModelState.IsValid)
+            {
+                return ResponseHelper.ReturnPostBackSuccess(this.HttpContext,
+                        string.Format(Mensagens.X_SALVO_COM_SUCESSO, ViewBag.NomeEntidade));
+            }
+        }
+        bairroSer.PopulateEdit(vm);
+        return PartialView("EditBairro", vm);
+    }
+```
