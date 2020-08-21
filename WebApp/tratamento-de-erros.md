@@ -1,68 +1,43 @@
 [Página Pai](./indexWebApp.md)
 
-### Don’t repeat yourself (DRY)
+## Tratando Exceções
 
-Tramento de erros é um requisito, naturalmente, mas não pode-se usar infinitos try's por todo o código. 
-Com isso, a artuitetura deve ser pensada achando um lugar onde um try possa ser retutilizado, quando possível.
+Tramento de erros é um requisito natural, além disso na ocorrencia de um erro, sempre o usuário tem que ser notificado e os datelhes dos erros devem ser persitidos para futura consulta Técnica.
 
-Alem disso na ocorrencia de um erro, basicamente sempre o usuário tem que ser notificado.
+### Olhando para o manual do Asp.net Core.
 
-Além disso, os datelhes dos erros devem ser persitidos para futura consulta do Usuário ou Técnica.
+Neste link informações sobre o Middleware para tratamento de exceções disponibilizado pela Microsoft e configurado no WebApp. Mas resumidamente, o Middleware tem uma página para mostrar detalhes de uma exception para o desenvolvedor e outra, foi desenvolvida, para ambiente de produção com dados básicos e não sensíveis a segurança do aplicativo para o usuário.
 
-## Classes auxiliars para tratamento de erros.
+https://docs.microsoft.com/pt-br/aspnet/core/fundamentals/error-handling?view=aspnetcore-3.1
 
-``` C#
-    .
-    .
-    .
+Neste outro link as melhores práticas para exceções.
 
-    catch (Exception e)
-    {
-        var t = new PlannedException(e);
-        HttpContext.GetExceptionsHelper().AddException(t);
-    }
-```
+https://docs.microsoft.com/pt-br/dotnet/standard/exceptions/best-practices-for-exceptions
 
-PlannedException: é uma classe para fazer a captura e organização dos dados do erro.
+Dois pontos em destaque nas boas práticas: 1. "Use blocos try/catch ao redor de código que pode potencialmente gerar uma exceção **e** seu código pode se recuperar dessa exceção". 2. Não fazer uso de funções que retornam código de erros ou booleano na intenção de denotar sucesso ou falha.
 
-GetExceptionsHelper(): é um metodo de extensão de HttpContext de retorna uma class ExceptionsHelper,
-essa é utilizada para ir acumulando os erros em HttpContext.Items, para ao final os erros poderem 
-ser gravados em log e exibidos ao usuário.
+Ou seja, 
 
-## Tratando erros de gravação de banco de dados
+Validações simples em ViewModel vão ocorrer e validações mais complexas vão occorer em Service e serão apresentadas para usuário como uma mensagem de Validação.
 
-DbContext.SaveChanges() foi sobreescrito, e faz toda função de tratamento de erros de gravação de
-banco de dados. Isso quer dizer basicamente ele possui o trecho de código exibido acima e que não 
-deve-se tratar esse tipo de erro pois já foram tratador. Para saber se algum erro ocorreu em 
-SaveChanges() chame por HttpContext.GetExceptionsHelper().[alguma coisa].
+### Exemplos de exceções que não serão tratadas
 
-## Exibindo o erro para o usuário
+Como exceptions são exceções, e o conceito implicito dessa palavrava não foi escolhido ao acaso na criação de linguagens de programação, quase nunca trata-se exceptions, até porque definiu-se aqui que exceptions vão ocorrer e serão tratadas pelo Middleware e serão mostradas ao usuário como mensagens de erro.
 
-Ao final da Actions que o Request solitou, é o ponto para devolver a UI do usuário e é ai que mais 
-uma vez vai-se usar HttpContext.GetExceptionsHelper().[alguma coisa].
+Exemplos:
 
-Veja no exemplo 1:
+1. Tentar excluir uma entidade de que tem filhos. Neste caso ocorerrá uma exception de banco.
+2. 
 
-``` C#
+### Exemplos de exceções que serão tratadas
 
-    [HttpPost]
-    public IActionResult DeleteModulo(string id)
-    {
-        moduloSer.DeleteModulo(id);
-        
-        if (HttpContext.GetExceptionsHelper().NoError)
-            return ResponseHelper.ReturnPostBackSuccess(this.HttpContext,
-                string.Format(Mensagens.X_EXCLUIDO_COM_SUCESSO, ViewBag.NomeEntidade));
-        else
-            return ResponseHelper.ReturnPostBackError(this.HttpContext, 
-                string.Format(Mensagens.ERRO_AO_EXCLUIR_X, ViewBag.NomeEntidade));
-    }
-```
+Quando uma exception pode ser recuperada para que o erro deixe de existir.
 
-ResponseHelper: é um classe que favorece para que DRY aconteça.
+1. Quando uma exception não tratada ocorrer deve-se gravar em log de banco de dados os detalhes da exception. Mas se o erro anterior tiver ocorrido por causa de indisponibilidade de banco de dados não será possível gravar em banco de dados e neste caso o try/catch pode ser usado, ou seja ao tentar gravar o log em banco, vai ocorrer uma exception, a recuperação do erro em catch seria gravar o log em arquivo para depois importar para o banco de dados .
+2. 
 
-Exemplo 2.
+### Exemplos de exceções que podem ser tratadas e transformadas em erro de validação
 
-Está previsto para o Service não ter exceptions não tratadas e apenas retornar boolean informando se a operação foi realizada ou não. Contudo, as exceptions do Service podem ser colocadas em HttpContext.GetExceptionsHelper().AddException, ficando assim código do Controller invocando uma Service que retorna true ou false.
+### Melhorar as mensagens de erro de exceptions para o usuário
 
-
+As menagens cruas de exceptions podem não ser inteligíveis ao usuário, mas elas podems ser traduzidas e transformadas em uma linguagem mais explicativa para o usuário, para isso use a classe auxiliar de tratamento de exceções PlannedException. Nela você pode fazer essa transformação da mensagem.
