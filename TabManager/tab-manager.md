@@ -130,7 +130,3 @@ tabManager.GetLastTab().bag.afterAjaxEx = function(callerElement, data, jqXHR, l
 ## MPA
 
 Não quer usar SPA, use MPA, o TabManger também está pronto para isso.
-
-## Fazer o botão voltar funcionar
-
-https://css-tricks.com/using-the-html5-history-api/
