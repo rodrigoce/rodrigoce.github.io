@@ -37,32 +37,32 @@ Os atributos _data-template, data-alias e data-event_ fornecem facilidades ao de
 
 Template é uma função javascript que o binder do TabManager executa ao encontrar um elemento marcado com o atributo _data-template_. 
 
-Pode ser passado parâmetros adicionais para a função usando o seguinte atributo: data-template-params="Red,Black,Yellow,10". Passar os parâmtros separados por vírgula. Todos os parâmetros são injetados dentro do template como strings. Mais de um template pode ser colocado fazendo a separação por pipe "t1|t2" e também seus respectivos parâmetros quando houverem "|param1,param2".
+Pode ser passado parâmetros adicionais para a função usando o seguinte atributo: data-template-params="Red,Black,Yellow,10". Passar os parâmtros separados por vírgula. Todos os parâmetros são injetados dentro do template como strings. Mais de um template pode ser colocado fazendo a separação por pipe "t1<code>|</code>t2" e também seus respectivos parâmetros quando houverem "<code>|</code>param1,param2".
 
 Ex:
 
 ```html
-<elemento data-template="AjaxRazorGrid2Template" ...> ... </elemento>
+<elemento data-template="AjaxRazorGrid3Template|xyzTemplate" data-template-params"1,2|2" ...> ... </elemento>
 ```
 
 ```typescript
-tabManager.bag["AjaxRazorGridTemplate"] = function (element: JQuery<HTMLElement>, tm: TabManager) {
+tabManager.bag["AjaxRazorGrid3Template"] = function (element: JQuery<HTMLElement>, tm: rjs.TabManager, parametro1: string, parametro2: string) {
     ...
 }
 ```
 
 ## Eventos
 
-Associa uma função aos eventos desejados.
+Associa uma função aos eventos desejados. Parâmtros adicionais podems ser passados para a função usando o atributo data-event-params. Cada parâmetro deve ser separado por vírgula e são passados como strings para a função.
 
 Ex:
 
 ```html
-<elemento data-event="change blur etc:nomeFuncao">...</elemento>
+<elemento data-event="change blur etc:nomeFuncao" data-event-params="1,2">...</elemento>
 ```
 
 ```typescript
-tabManager.GetLastTab().bag.onTipoPessoa = function(lastTab, el) {
+tabManager.GetLastTab().bag["onTipoPessoa"] = function(lastTab: rjs.Tab, el: HTMLElement, param1: string, param2: string) {
     ...
 }
 ```
