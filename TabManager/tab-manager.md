@@ -2,29 +2,28 @@
 
 ## SPA
 
-O comportamento no TabManager SPA é obtido abrindo uma nova aba (tab) na mesma página e ocultando a anteior, depois fechando da última aba no sentido da primeira. Cada aba é **Modal** - não permite a volta para a anteior de fechar a atual.
+O comportamento no TabManager SPA é obtido abrindo uma nova aba (tab) na mesma página e ocultando a anteior, depois fechando da última aba no sentido da primeira. Cada aba é **Modal**, ou seja, não permite a volta para a anteior de fechar a atual.
 
 ### Eventos das abas SPA
 
-1. **onShow**: Ocorre depois a nova aba foi aberta. O código deste evento deve estar colocado em _tabManager.GetLastTab().bag.onShow(lastTab)_;
-2. **onBack**: Ocorre quando a aba posterior a essa foi fechada e a aba atual passa a ser essa novamente. O código deste evento deve estar colocado em _tabManager.GetLastTab().bag.onShow(lastTab)_;
-3.  **onClose**: Ocorre depois que a aba foi fechada. O codigo desde evento eve estar colado em _tabManager.GetLastTab().bag.onClose(lastTab)_;
+1. **onShow**: Ocorre depois que a nova aba foi aberta;
+2. **onBack**: Ocorre quando a aba posterior a essa foi fechada e a aba atual passa a ser essa novamente;
+3.  **onClose**: Ocorre depois que a aba atual foi fechada.
 
 Ex:
-```javascript   
-<script type="text/javascript">
-    tabManager.GetLastTab().bag.onShow = function(lastTab) {
-        alert("Oi " + lastTab.titulo);
-    }
+```typescript   
 
-    tabManager.GetLastTab().bag.onBack = function(lastTab) {
-        alert("Oi " + lastTab.titulo);
-    }
+tabManager.GetLastTab().bag["onShow"] = function(lastTab: rjs.Tab)
+    alert("Oi " + lastTab.titulo);
+}
 
-    tabManager.GetLastTab().bag.onClose = function(lastTab) {
-        alert("Tchau " + lastTab.titulo);
-    }
-</script>
+tabManager.GetLastTab().bag["onBack"] = function(lastTab: rjs.Tab)
+    alert("Oi " + lastTab.titulo);
+}
+
+tabManager.GetLastTab().bag["onClose"] = function(lastTab: rjs.Tab)
+    alert("Tchau " + lastTab.titulo);
+}
 ```
 
 ## Atributos data-
@@ -37,7 +36,7 @@ Os atributos _data-template, data-alias e data-event_ fornecem facilidades ao de
 
 Template é uma função javascript que o binder do TabManager executa ao encontrar um elemento marcado com o atributo _data-template_. 
 
-Pode ser passado parâmetros adicionais para a função usando o seguinte atributo: data-template-params="Red,Black,Yellow,10". Passar os parâmtros separados por vírgula. Todos os parâmetros são injetados dentro do template como strings. Mais de um template pode ser colocado fazendo a separação por pipe "t1<code>|</code>t2" e também seus respectivos parâmetros quando houverem "<code>|</code>param1,param2".
+Pode ser passado parâmetros adicionais para a função com o atributo data-template-params. Estes devem ser separados por vírgula. Todos os parâmetros são injetados dentro do template como strings. Mais de um template pode ser colocado fazendo a separação por pipe "t1<code>|</code>t2" e também seus respectivos parâmetros quando houverem "<code>|</code>param1,param2".
 
 Ex:
 
@@ -51,9 +50,13 @@ tabManager.bag["AjaxRazorGrid3Template"] = function (element: JQuery<HTMLElement
 }
 ```
 
-## Eventos
+## Eventos do TabManager
 
-Associa uma função aos eventos desejados. Parâmtros adicionais podems ser passados para a função usando o atributo data-event-params. Cada parâmetro deve ser separado por vírgula e são passados como strings para a função.
+Eventos podem ser criados usando o atributo _data-event_. É como utilizar eventos no HTML da maneira tradicional, mas ao fazer isso, o TabManager irá enviar sempre
+dois parâmetros adicionais ao evento, o lastTab, que representa a tab atual e o elemento que disparou o evento. Esses parâmetros costumam ser úteis ao código
+que irá tratar o evento.
+
+Parâmetros adicionais podem ser passados para a função usando o atributo data-event-params. Cada parâmetro deve ser separado por vírgula e são passados como strings para a função.
 
 Ex:
 
@@ -75,15 +78,15 @@ Cria em GetLastTab().bag um JQuery com o alias informado no elemento, com o pref
 <elemento data-alias="nomeDoAlias">...</elemento>
 ```
 
-```javascript
+```typescript
 $nomeDoAlias.hide();
 ```
 
 ## AJAX
 
-Templates que fazem requisições ajax podem ter atributos de eventos ajax associados a eles, os eventos vão acionar a função implementada no momento apropriado. 
+Templates que fazem requisições AJAX podem ter atributos de eventos AJAX associados a eles, os eventos vão acionar a função implementada no momento apropriado. 
 
-Esse elementos podem ser o seguintes data-attr de eventos adicionados:
+Esse elementos podem ter o seguintes data-attr de eventos adicionados:
   
 ## data-before-ajax='funcao(callerElement, [lastTab/null])' [ambos] 
    

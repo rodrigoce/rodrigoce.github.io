@@ -2,12 +2,15 @@
 
 ## TabManager
 
-É uma Library JavaScript para Client Side. Traz produtidade ao desenvovedor e UX ao nível que o usuário Web moderno 
-está acostumado a usar em Aplicativos Web atuais. Feita para prover uso amplo de atualizações parciais das páginas
-com AJAX.
+É uma Library JavaScript para Client Side. Foi pensada para trabalhar em conjunto do back end do WebApp. 
+Essa combinação traz produtidade ao desenvovedor por ter recursos prontos para serem usados na interfaces Web.
+O TabManager facilita a contrução da interface dentro de um conceito onde ela terá uma página principal
+(menu) e daí outras outras interfaces vão sendo carregadas sob interação do usuário por AJAX.
 
-* Quando uma página Web usa amplamente AJAX de tal forma que UI representa não mudar de página temos uma SPA (Single Page Application).
-* Mesmo que a UI representa as mudanças de páginas, tendo então uma aplicação MPA (Multiple Pages Application) (Tradicionais Sites) o amplo uso de AJAX melhora a UX.
+Dois modos de interface podem ser obtidos como TabManager.
+
+* SPA (Single Page Application) - Quando o usuário interage na página e essa é alterada dinamicametne pela interações.
+* MPA (Multiple Pages Application) - Quando o usuário interage na página e como resultado outra página é carregada. 
 
 ## Documentação
 
