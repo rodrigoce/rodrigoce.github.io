@@ -1,6 +1,6 @@
 Esta página está em construção.
 
-## Índice
+## Destaques
 
 1. [Projetos no GitHub](https://github.com/rodrigoce)
 2. [Sistema de Academia](./SistemaAcademia/indexSistemaAcademia.md)
